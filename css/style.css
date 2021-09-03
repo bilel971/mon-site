@@ -1,0 +1,151 @@
+
+div#content  div{
+	display: inline-block;
+	
+}
+
+
+div.block-login {
+
+display: block;
+position: absolute;
+font-size: 10px;
+
+}
+
+div.block-signin {
+display: block;
+position: absolute;
+font-size: 10px;
+
+
+}
+
+
+
+div#content  div.leftbox{
+	padding-left:150px;
+	 
+}
+
+div#content  div.rightbox{
+	padding-left:150px;
+	
+}
+
+
+
+
+
+div#contenue div{
+	display: inline-block;
+}
+
+
+div#contenue div.bottombox{
+	padding-left:150px;
+	
+}
+
+
+div#contenue div.topbox{
+	padding-left:150px;
+	
+}
+
+
+
+
+
+nav.menu ul li.bouton {
+	list-style-type: none;
+	display: inline-block;
+
+}
+
+nav.menu ul li.bouton {
+	
+}
+
+nav.menu ul li.bouton a{
+	color:#DCDB3E;
+	text-decoration: none;
+}
+
+nav.menu ul li.bouton:hover a{
+	 color: #DCDB3E;
+	 background-color: black;
+	 transition: 0,3s all;
+}
+
+
+body{
+	background-color: #050504;
+}
+
+h2.header{
+	color: #DCDB3E;
+	text-align: center;
+	font-size: 20px;
+
+}
+
+h2.titre1 {
+	color: #DCDB3E;
+	font-size: 15px;
+	padding-left:150px;
+
+}
+
+h2.titre2 {
+	color: #DCDB3E;
+	font-size: 15px;
+	padding-left:100px;
+
+}
+
+h2.titre3 {
+	color: #DCDB3E;
+	font-size: 15px;
+	padding-left:100px;
+
+}
+
+h2.titre4 {
+	color: #DCDB3E;
+	font-size: 15px;
+	padding-left:100px;
+
+}
+
+h1.tete {
+	color: #DCDB3E;
+	text-align: center;
+}
+
+h1.login {
+	color: #DCDB3E;
+	text-align: right;
+	margin-right: 50px;
+}
+
+h1.signin {
+	color: #DCDB3E;
+	padding-left: 100px;
+}
+
+a.accueil {
+	padding-left:5px;
+
+}
+
+a.categorie {
+	padding-left:25px;
+
+}
+
+form.login {
+	padding-left: 600px;
+	text-align: right;
+
+}
