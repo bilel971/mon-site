@@ -1,16 +1,18 @@
+
 <?php
+require_once 'database.php';
 
 if (isset($_POST['formlogin'])) {
 
     $cpseudo = $_POST['cpseudo'];
     $cpassword = $_POST['cpassword'];
-    $lemail = $_POST['lemail'];
 
-    if (!empty($cpseudo) && !empty($cpassword) && !empty($lemail)) {
 
-        require 'database.php';
-        $q = $db->prepare("SELECT * FROM user WHERE email = :email");
-        $q->execute(['email' => $lemail]);
+    if (!empty($cpseudo) && !empty($cpassword)) {
+
+
+        $q = $db->prepare("SELECT * FROM users WHERE pseudo = :cpseudo");
+        $q->execute(['cpseudo' => $cpseudo]);
         $result = $q->fetch();
 
         if ($result == true) {
@@ -21,8 +23,6 @@ if (isset($_POST['formlogin'])) {
             } else {
                 echo "Le mot de passe est incorrecte";
             }
-        } else {
-            echo "Le compte portant l'email " . $lemail . " n'existe pas";
         }
 
     }

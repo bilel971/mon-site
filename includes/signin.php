@@ -1,5 +1,6 @@
 <?php
 
+require_once 'database.php';
 
 if (isset($_POST['formsend'])) {
 
@@ -11,30 +12,21 @@ if (isset($_POST['formsend'])) {
     if (!empty($pseudo) && !empty($password) && !empty($email) && !empty($cmotdepasse)) {
 
         if ($password == $cmotdepasse) {
+            $hashpass = password_hash($password, PASSWORD_BCRYPT);
 
-
-            $hashpass = password_hash($password, PASSWORD_ARGON2ID);
-
-            require 'database.php';
-
-            $c = $db->prepare("SELECT email FROM user WHERE email = :email");
+            $c = $db->prepare("SELECT email FROM users WHERE email = :email");
             $c->execute(['email' => $email]);
-
             $result = $c->rowCount();
 
             if ($result == 0) {
-                $q = $db->prepare("INSERT INTO user(pseudo,email,password) VALUES(:pseudo,:email,:password)");
+                $q = $db->prepare("INSERT INTO users(pseudo,email,password) VALUES(:pseudo,:email,:password)");
                 $q->execute([
                     'pseudo' => $pseudo,
                     'email' => $email,
                     'password' => $hashpass
-
                 ]);
                 echo "Le compte a ete créée";
             }
-
-
         }
     }
 }
-?>

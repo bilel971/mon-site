@@ -1,36 +1,21 @@
 
 div#content  div{
 	display: inline-block;
-	
-}
-
-
-div.block-login {
-
-display: block;
-position: absolute;
-font-size: 10px;
 
 }
 
-div.block-signin {
-display: block;
-position: absolute;
-font-size: 10px;
 
-
-}
 
 
 
 div#content  div.leftbox{
 	padding-left:150px;
-	 
+
 }
 
 div#content  div.rightbox{
 	padding-left:150px;
-	
+
 }
 
 
@@ -44,13 +29,13 @@ div#contenue div{
 
 div#contenue div.bottombox{
 	padding-left:150px;
-	
+
 }
 
 
 div#contenue div.topbox{
 	padding-left:150px;
-	
+
 }
 
 
@@ -64,7 +49,7 @@ nav.menu ul li.bouton {
 }
 
 nav.menu ul li.bouton {
-	
+
 }
 
 nav.menu ul li.bouton a{
